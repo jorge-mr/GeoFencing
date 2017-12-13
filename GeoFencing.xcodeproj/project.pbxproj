@@ -12,6 +12,7 @@
 		CFCEC6C51FE181F60012C157 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFCEC6C31FE181F60012C157 /* Main.storyboard */; };
 		CFCEC6C71FE181F60012C157 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFCEC6C61FE181F60012C157 /* Assets.xcassets */; };
 		CFCEC6CA1FE181F60012C157 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFCEC6C81FE181F60012C157 /* LaunchScreen.storyboard */; };
+		CFCEC6D31FE1829D0012C157 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFCEC6D21FE1829D0012C157 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		CFCEC6C61FE181F60012C157 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFCEC6C91FE181F60012C157 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFCEC6CB1FE181F60012C157 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFCEC6D21FE1829D0012C157 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFCEC6D31FE1829D0012C157 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				CFCEC6BE1FE181F60012C157 /* GeoFencing */,
 				CFCEC6BD1FE181F60012C157 /* Products */,
+				CFCEC6D11FE1829D0012C157 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				CFCEC6CB1FE181F60012C157 /* Info.plist */,
 			);
 			path = GeoFencing;
+			sourceTree = "<group>";
+		};
+		CFCEC6D11FE1829D0012C157 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFCEC6D21FE1829D0012C157 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +109,14 @@
 					CFCEC6BB1FE181F60012C157 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -275,7 +295,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38YP5JNHS9;
 				INFOPLIST_FILE = GeoFencing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kaleido.mx.GeoFencing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,7 +311,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38YP5JNHS9;
 				INFOPLIST_FILE = GeoFencing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kaleido.mx.GeoFencing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
